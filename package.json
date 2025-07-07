@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "nodemon index.js"
+  }
+}
+
