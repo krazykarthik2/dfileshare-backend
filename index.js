@@ -3,8 +3,14 @@
 // -------------------------
 
 const WebSocket = require("ws");
+const wss = new WebSocket.Server({
+  port: 8080,
+  verifyClient: (info, done) => {
+    // Always accept connection
+    done(true);
+  }
+});  
 
-const wss = new WebSocket.Server({ port: 8080 });
 const sessions = new Map();
 
 wss.on("connection", (ws, req) => {
